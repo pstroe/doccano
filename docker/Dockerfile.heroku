@@ -1,1 +1,1 @@
-FROM doccano/doccano:nightly
+FROM pstroe/doccano

@@ -79,11 +79,12 @@ services:
       API_URL: "http://backend:8000"
       GOOGLE_TRACKING_ID: ""
       WORKER_PROCESSES: "auto"
+      PORT: "${PORT:-8080}"
     volumes:
       - static_volume:/static
       - media:/media
     ports:
-      - 80:8080
+      - "${PORT:-8080}:8080"
     depends_on:
       - backend
     networks:

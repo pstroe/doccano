@@ -2,7 +2,6 @@ ARG PYTHON_VERSION="3.8.13-slim-bullseye"
 ARG NODE_VERSION="18.20-bullseye-slim"
 FROM node:${NODE_VERSION} AS frontend-builder
 
-WORKDIR /
 COPY frontend/ /frontend/
 WORKDIR /frontend
 ENV PUBLIC_PATH="/static/_nuxt/"

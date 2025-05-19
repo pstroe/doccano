@@ -77,6 +77,10 @@ ENV GOOGLE_TRACKING_ID=""
 ENV DJANGO_SETTINGS_MODULE="config.settings.production"
 
 USER doccano
+
+RUN doccano init
+RUN doccano migrate
+
 EXPOSE ${PORT:-8080}
 
 CMD ["/doccano/tools/run.sh"]
